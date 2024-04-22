@@ -23,7 +23,7 @@ session.commit()
 
 
 #get via primary id
-target_guild = session.query(models.Guild).get(125)
+target_guild = session.get(models.Guild, 125)
 
 if target_guild:
     print(f"Guild ID: {target_guild.id}, Name: {target_guild.name}, Spotify User: {target_guild.spotify_user}, Enabled: {target_guild.enabled}, Playlist Name: {target_guild.playlist_name}, Playlist ID: {target_guild.playlist_id}")
